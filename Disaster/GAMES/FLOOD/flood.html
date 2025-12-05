@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monsoon Rush - Flood Safety</title>
+    <link rel="stylesheet" href="flood.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <h1>Monsoon Rush</h1>
+        <div id="ui-panel">
+            <div id="timer">Time Left: <span id="time">10</span></div>
+            <div id="score">Score: <span id="points">0</span></div>
+        </div>
+
+        <div id="task-list">
+            <h3>Emergency Checklist:</h3>
+            <ul>
+                <li id="task-documents">Pack Documents</li>
+                <li id="task-torch">Pack Torch & First-Aid</li>
+                <li id="task-water">Secure Drinking Water</li>
+                <li id="task-tv">Move TV to high shelf</li>
+                <li id="task-gas">Turn off Gas Cylinder</li>
+                <li id="task-power">Switch off Main Power</li>
+                <li id="task-family">Move Family to Rooftop</li>
+            </ul>
+        </div>
+
+        <div id="house">
+            <div class="room" id="ground-floor">
+                <div class="item" id="documents">📄</div>
+                <div class="item" id="tv">📺</div>
+                <div class="item" id="gas">🔥</div>
+                <div class="item" id="family">👨‍👩‍👧‍👦</div>
+            </div>
+            <div class="room" id="first-floor">
+                <div class="item" id="torch">🔦</div>
+                <div class="item" id="water">💧</div>
+                <div class="item" id="power">⚡️</div>
+                <div id="safe-zone">SAFE ZONE</div>
+            </div>
+            <div id="water-level"></div>
+        </div>
+        
+        <div id="start-screen" class="overlay">
+            <div class="message-box">
+                <h2>Flood Warning!</h2>
+                <p>A flood alert has been issued. You have 10 seconds to prepare your home and family before the water rises. Click the items on the checklist to secure them!</p>
+                <button id="start-button">Start Preparing!</button>
+            </div>
+        </div>
+
+        <div id="end-screen" class="overlay hidden">
+            <div class="message-box">
+                <h2 id="end-title">Time's Up!</h2>
+                <p id="end-message">You did your best.</p>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <button id="restart-button">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="flood.js"></script>
+</body>
+</html>

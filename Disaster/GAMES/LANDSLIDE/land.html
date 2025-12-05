@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boulder Dash</title>
+    <link rel="stylesheet" href="land.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="ui-panel">
+            Score: <span id="score">0</span>
+        </div>
+
+        <div id="game-area">
+            <div id="car"></div>
+            </div>
+
+        <div id="start-screen" class="overlay">
+            <div class="message-box">
+                <h2>Boulder Dash</h2>
+                <p>Use the Left and Right arrow keys to dodge the falling boulders. Survive as long as you can!</p>
+                <button id="start-button">Start Driving</button>
+            </div>
+        </div>
+
+        <div id="end-screen" class="overlay hidden">
+            <div class="message-box">
+                <h2>Game Over!</h2>
+                <p>Final Score: <span id="final-score">0</span></p>
+                <button id="restart-button">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="land.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NDRF: First Response</title>
+    <link rel="stylesheet" href="earthquake.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <header id="ui-panel">
+            <span>Time Left: <span id="time-left">120</span>s</span>
+            <span>Survivors Found: <span id="survivors-found">0</span> / 3</span>
+        </header>
+        
+        <main id="game-board-container">
+            <div id="game-board">
+                </div>
+        </main>
+
+        <footer id="status-bar">
+            <p id="status-text">Use Arrow Keys to move. Move into debris to clear it.</p>
+        </footer>
+
+        <div id="start-screen" class="overlay">
+            <div class="message-box">
+                <h2>NDRF: First Response</h2>
+                <p>A landslide has occurred. Navigate the debris, clear paths, rescue 3 survivors, and get to the exit zone before time runs out. Beware of aftershocks!</p>
+                <button id="start-button">Start Mission</button>
+            </div>
+        </div>
+
+        <div id="end-screen" class="overlay hidden">
+            <div class="message-box">
+                <h2 id="end-title">Mission Failed</h2>
+                <p id="end-message">You ran out of time.</p>
+                <button id="restart-button">Try Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="earthquake.js"></script>
+</body>
+</html>

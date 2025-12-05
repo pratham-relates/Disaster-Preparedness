@@ -1,0 +1,81 @@
+body {
+    background-color: #48C9B0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    color: #333;
+}
+
+h1 {
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+.scoreboard {
+    display: flex;
+    gap: 50px;
+    background: #f0f0f0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+#startButton {
+    margin: 20px;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #F39C12;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: background-color 0.3s;
+}
+
+#startButton:hover {
+    background-color: #E67E22;
+}
+
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    width: 600px;
+    height: 450px;
+    background-color: #2ECC71;
+    padding: 20px;
+    border: 10px solid #8C5B3F;
+    border-radius: 15px;
+}
+
+.hole {
+    width: 130px;
+    height: 130px;
+    background-color: #9B7653;
+    border-radius: 50%;
+    border: 5px solid #6D4C41;
+    overflow: hidden;
+    position: relative;
+    box-shadow: inset 0 10px 10px rgba(0,0,0,0.4);
+}
+
+.mole {
+    background-image: url('https://imgs.search.brave.com/qIwBAD0HHdapfaoluAl00JrbV_aOUNmJNGSRRarQDRU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/cG5nYWxsLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMTUvQ2Fy/dG9vbi1GaXJlLVBO/Ry1DbGlwYXJ0LnBu/Zw'); /* A simple mole image */
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: -100%; /* Start hidden below the hole */
+    transition: all 0.3s ease-in-out;
+}
+
+.hole.up .mole {
+    bottom: 0; /* Move mole up into view */
+}

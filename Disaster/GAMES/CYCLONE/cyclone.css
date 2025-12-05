@@ -1,0 +1,106 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #6c757d; /* Muted gray-blue */
+    margin: 0;
+}
+
+#game-container {
+    width: 90%;
+    max-width: 800px;
+    height: 95%;
+    max-height: 700px;
+    background-color: #f8f9fa; /* Off-white */
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+}
+
+header {
+    background-color: #343a40; /* Dark gray */
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+#status-meters {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    background: #e9ecef; /* Light gray */
+    border-bottom: 2px solid #dee2e6;
+}
+.meter { text-align: center; }
+.meter label { font-weight: bold; font-size: 0.9em; }
+progress { width: 150px; height: 20px; }
+/* Custom progress bar colors */
+#trust-bar::-webkit-progress-value { background: #007bff; }
+#preparedness-bar::-webkit-progress-value { background: #fd7e14; }
+#safety-bar::-webkit-progress-value { background: #28a745; }
+
+#scenario-container {
+    flex-grow: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#scenario-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    background-color: #ccc;
+    border: 3px solid #dee2e6;
+}
+#scenario-text {
+    font-size: 1.2em;
+    line-height: 1.6;
+    text-align: center;
+}
+
+#choices-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    border-top: 2px solid #dee2e6;
+}
+.choice-button {
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    border: 2px solid #343a40;
+    background: white;
+    color: #343a40;
+    border-radius: 8px;
+    transition: all 0.2s;
+}
+.choice-button:hover {
+    background: #343a40;
+    color: white;
+}
+
+/* Overlays */
+.overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.8); display: flex; justify-content: center;
+    align-items: center; color: white; text-align: center; z-index: 20;
+}
+.message-box {
+    background: #343a40; padding: 30px; border-radius: 15px; max-width: 80%;
+}
+.message-box button {
+    padding: 10px 20px; font-size: 1.2em; cursor: pointer; border: none;
+    border-radius: 5px; margin-top: 15px;
+}
+.hidden { display: none; }

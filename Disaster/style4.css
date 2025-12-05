@@ -1,0 +1,32 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f4f4f9; /* A light, clean background color */
+    color: #333; /* Dark gray text for readability */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.content-container {
+    background-color: #ffffff; /* White background for the content area */
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for a floating effect */
+    width: 100%;
+    max-width: 700px; /* A good maximum width for readability */
+    text-align: center;
+    line-height: 1.6; /* Improved line spacing for paragraph text */
+}
+
+h1 {
+    color: #2c3e50; /* A dark blue-gray color for the heading */
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1em;
+    color: #555; /* Slightly lighter text for the paragraph */
+}

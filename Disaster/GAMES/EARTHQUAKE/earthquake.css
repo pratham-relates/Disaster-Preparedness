@@ -1,0 +1,88 @@
+:root {
+    --grid-size: 20; /* 20x15 grid */
+    --tile-size: 40px;
+}
+
+body {
+    font-family: 'Verdana', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #333;
+    margin: 0;
+}
+
+#game-container {
+    width: calc(var(--grid-size) * var(--tile-size));
+    border: 5px solid #111;
+    background-color: #5a5a5a;
+    position: relative;
+    box-shadow: 0 0 20px #000;
+}
+
+#ui-panel {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    font-weight: bold;
+}
+
+#game-board-container {
+    position: relative;
+    height: calc(15 * var(--tile-size)); /* 15 tiles high */
+}
+
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(var(--grid-size), 1fr);
+    position: relative;
+}
+
+.tile {
+    width: var(--tile-size);
+    height: var(--tile-size);
+    box-sizing: border-box;
+}
+
+/* Tile Types */
+.path { background-color: #7a7a7a; }
+.wall { background-color: #3d2b1f; background-image: radial-gradient(#5a4a3a 20%, transparent 0); background-size: 10px 10px; }
+.debris { background-color: #a0522d; background-image: radial-gradient(#6b4226 20%, transparent 0); background-size: 8px 8px; }
+.survivor { background-color: #3498db; text-align: center; font-size: 25px; line-height: 40px; }
+.exit { background-color: #2ecc71; text-align: center; font-size: 25px; line-height: 40px; }
+
+#player {
+    width: calc(var(--tile-size) - 8px);
+    height: calc(var(--tile-size) - 8px);
+    background-color: #f1c40f; /* NDRF Orange/Yellow */
+    border: 4px solid #e67e22;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 0.1s linear;
+    z-index: 10;
+}
+
+#status-bar {
+    padding: 5px 10px;
+    background-color: #222;
+    color: white;
+    text-align: center;
+    font-size: 0.9em;
+}
+
+@keyframes shake {
+    10%, 90% { transform: translate3d(-1px, 0, 0); }
+    20%, 80% { transform: translate3d(2px, 0, 0); }
+    30%, 50%, 70% { transform: translate3d(-4px, 0, 0); }
+    40%, 60% { transform: translate3d(4px, 0, 0); }
+}
+.shake { animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both; }
+
+/* Overlays */
+.overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; text-align: center; color: white; z-index: 100; }
+.message-box { padding: 30px; }
+.message-box button { padding: 10px 20px; font-size: 1.2em; cursor: pointer; margin-top: 15px; }
+.hidden { display: none; }
